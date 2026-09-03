@@ -32,18 +32,18 @@ The visual/interaction bar to hit: **Apple's MacBook product page** — cinemati
   - Rationale: fewer runtime dependencies = lower long-term maintenance risk and no breakage if a third-party library is deprecated or removed.
 - **Routing:** Single-page, section-based (anchor scroll), no react-router needed unless a separate `/resume` or `/projects/:id` deep-link view is desired later.
 - **Hosting/Deploy:** GitHub Pages, deployed from this repo (`KathireshanM.github.io`), built via GitHub Actions workflow (`npm run build` → publish `dist` to Pages). No custom domain for now.
-- **Assets:** Local images under `src/assets` (placeholders for now — profile photo and project screenshots to be added later by the user).
+- **Assets:** No profile photo or project screenshots. Use typography, CSS, and native UI treatments to present the work.
 
 ## 5. Site Sections (in order)
 
 1. **Hero / Landing** — Full-viewport intro with name, title, a short tagline, and a scroll cue. Subtle entrance animation.
-2. **About Me** — Short personal + professional summary. Scroll-reveal text/image.
-3. **Experience Timeline** — Reverse-chronological role history mapped as below (see §6). Animated timeline reveal as user scrolls.
+2. **About Me** — Short personal + professional summary. Scroll-reveal text and CSS-led visual treatment.
+3. **Experience Timeline** — Reverse-chronological role history mapped as below (see §6). Animated timeline reveal as user scrolls, with selected evidence and outcomes rather than a wall of resume bullets.
 4. **Skills / Tech Stack** — Grouped skill categories (e.g., Testing/QE, Automation, AI/Copilot tooling, Cloud/DevOps, Languages). Animated grid/tags.
-5. **Projects** — Feature cards/sections for the 3 projects in §7, each with description, tech used, and impact. Apple-style "product feature" treatment (large heading, supporting visual placeholder, short copy).
-6. **Achievements / Extracurricular** — Year End Event organizing (team building/culture contributions).
-7. **Resume** — Prominent "Download Resume" button (serves the PDF from `req/` or a copied `public/` asset).
-9. **Contact / Footer** — Email, LinkedIn, GitHub (exact values to be pulled from resume — see Open Items §10), social icons, copyright. Phone number is intentionally excluded from the site.
+5. **Selected Work / Innovation** — Feature sections for the tools and initiatives in §7, organized into AI engineering, test data and mocking platforms, automation migrations, application quality leadership, observability, and enterprise delivery. Each feature must explain the problem, what was built, how it worked, and the outcome where available.
+6. **Education & Certifications** — Compact, scannable groups for the confirmed education and certifications.
+7. **Achievements / Extracurricular** — Awards, technical achievements, and Year-End Event leadership.
+8. **Contact / Footer** — Email, LinkedIn, GitHub, social icons, copyright. Phone number is intentionally excluded from the site. No resume download is included at this stage.
 
 ## 6. Experience / Role Mapping Rules (IMPORTANT — must be followed exactly)
 
@@ -52,34 +52,60 @@ The site must **not** use raw internal job titles as-is; map them to public-faci
 | Internal / Actual Title                  | Display Title on Website        |
 |-------------------------------------------|----------------------------------|
 | Associate                                  | Senior Quality Engineer \| SDET |
-| Programmer Analyst / Programmer            | Quality Engineer                |
-| Programmer Trainee                         | Junior Quality Engineer         |
+| Programmer Analyst                         | Quality Engineer                |
+| Programmer                                 | Junior Quality Engineer         |
 
 - Any role title encountered that is a variant of "Associate" → display as **Senior Quality Engineer | SDET**.
-- Any role title that is "Programmer Analyst" or "Programmer" → display as **Quality Engineer**.
-- "Programmer Trainee" → display as **Junior Quality Engineer**.
-- Company names, exact dates, and durations must come from the resume (`req/Kathireshan Manoharan.pdf`) or be explicitly supplied by the user — do not invent dates or company names.
+- "Programmer Analyst" → display as **Quality Engineer**.
+- "Programmer" → display as **Junior Quality Engineer**.
+- The internal titles must not appear in the UI. Use only the public display titles above.
+- Company names, exact dates, and durations must come from `req/resume.md` or be explicitly supplied by the user — do not invent dates or company names.
 
-## 7. Key Projects to Feature (content confirmed by user)
+## 7. Key Projects and Capability Stories to Feature (content confirmed by user)
 
-### 7.1 Test Case AI Agent (current year, Senior Quality Engineer | SDET role)
+### 7.1 Test Case AI Agent (Senior Quality Engineer | SDET role)
 
 - Built using the **GitHub Copilot SDK**.
 - Purpose: AI agent that generates/assists with test cases.
 - Highlight: cutting-edge, GenAI-driven quality engineering tooling.
 
-### 7.2 Dynamic Run-Time Schema Based Test Data Creation Tool (built during Quality Engineer role or earlier)
+### 7.2 XML and JSON Test Data Platforms (Quality Engineer and Senior Quality Engineer | SDET roles)
 
 - Dynamically creates test data based on schemas resolved at run time.
 - Runs inside an **Azure Pipeline**.
 - Integrated with an **AWS service**.
 
-### 7.3 Mock Server Tool (built during Quality Engineer role or earlier)
+### 7.3 Mock Server Tool (Senior Quality Engineer | SDET role)
 
 - Advanced custom mocking capabilities:
   - Custom response status code, body, cookies, and full response object via custom JSON.
   - JavaScript scripting support to derive dynamic mock responses at runtime.
   - Custom API paths with **pattern matching** support.
+
+### 7.4 AI Engineering and Custom Agents
+
+- AI Mesh concept/prototype with structured self-notes, feedback loops, self-evaluation, and adaptive processing guidance for AI agents. It must be presented as a concept, not a production claim.
+- Custom BDD test automation agent configured through markdown-based skills, agent instructions, and hooks; supports creating, modifying, and debugging automation code.
+- GitHub Copilot used to understand application code, derive mock responses, identify bugs, edge cases, and gaps early.
+
+### 7.5 Automation Framework Migrations
+
+- Led the Serenity Java + Cucumber BDD to Cypress JavaScript + Cucumber BDD migration for 1,400 digital portal automation scripts and a four-member team; created the Cypress framework from scratch after a proof of concept.
+- Led the Serenity Java + Cucumber BDD to WebdriverIO JavaScript + Cucumber BDD migration for Salesforce automation and a 15-member team; created the WebdriverIO framework from scratch after a proof of concept.
+- Do not invent separate migration dates; describe both within the Quality Engineer employment period.
+
+### 7.6 Application Quality Leadership and Observability
+
+- Led an eight-member AWS Digital Customer web portal QA team, including Agile ceremonies, customer/business-focused testing, in-sprint automation, QA audits, DSR/MSR reporting, metrics, bug triage, and delivery support.
+- Maintained approximately 80% automation coverage and pass percentage for twice-weekly releases while addressing flakiness, test data issues, and changing requirements.
+- Built nightly smoke and deployment-triggered regression pipelines that published reports to GitHub Pages and emailed results to stakeholders.
+- Created production synthetic tests and monitored DataDog alerts, metrics, thresholds, and errors.
+- Built a real-time multi-device test that selected the top 10 production device/browser combinations and matched them to BrowserStack coverage.
+
+### 7.7 Enterprise Migrations
+
+- Led SAP user, billing, payment, meter, and industry-detail migration to Salesforce and a custom energy CRM connected to the UK energy industry during the Quality Engineer role.
+- Led end-customer authentication migration from Spring Boot and AWS Cognito to Microsoft Entra for a digital web application and mobile app during the Senior Quality Engineer | SDET role.
 
 ## 8. Achievements / Culture Contribution
 
@@ -96,17 +122,17 @@ The site must **not** use raw internal job titles as-is; map them to public-faci
 
 ## 10. Open Items / Confirm Before Building (do not assume)
 
-- [ ] Exact resume-derived facts: company names, employment dates/durations for each role, degree/education, exact email, LinkedIn URL, GitHub URL — must be transcribed from `req/Kathireshan Manoharan.pdf` (or pasted by the user) into `req/content.md` before the agent builds the site. **The AI agent must not invent these.**
+- [x] Resume-derived facts are available in `req/resume.md` and have been incorporated into `req/content.md`.
 - [x] Phone number will NOT be published on the site — confirmed by the user. Only email, LinkedIn, and GitHub are shown for contact.
 - [x] TypeScript confirmed for the React app.
 - [x] Confirmed: plain CSS/CSS Modules only (no Tailwind), and no third-party animation library — see §4 dependency philosophy.
-- [ ] Confirm project/company names are safe to publish (some employers restrict naming internal tools/clients — user to confirm no confidentiality issue with project descriptions above).
-- [ ] Profile photo and project screenshots — placeholders will be used until the user supplies real images.
+- [x] User confirmed the information in `req/resume.md` can be used on the website, including company and project details.
+- [x] No profile photo or project screenshots are required; the design must work without them.
 
 ## 11. Deliverables for This Planning Phase
 
 - `req/requirement.md` (this file) — full requirements.
-- `req/content.md` — structured, ready-to-use copy/content for every section (with explicit TODO markers where resume data is still needed).
+- `req/content.md` — structured, ready-to-use copy/content for every section, populated from `req/resume.md`.
 - `req/plan.md` — phased build plan/roadmap for the React app.
 - `req/prompt.md` — the master prompt to paste into Copilot Chat (Agent Mode) to scaffold and build the actual website.
 - `.github/copilot-instructions.md` — persistent repo-level instructions so every Copilot Agent session follows the same stack/conventions.

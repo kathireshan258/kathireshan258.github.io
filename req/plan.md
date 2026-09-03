@@ -2,9 +2,9 @@
 
 ## Phase 0 — Finalize Content (blocker before scaffolding)
 
-1. User fills every `TODO(resume)` / `TODO(user)` item in [content.md](content.md) using the resume PDF and personal input.
-2. Remaining open items in [requirement.md](requirement.md) §10 to confirm: project name confidentiality, and approving image placeholders. (Language, styling approach, and animation approach are already decided — see §4.)
-3. User supplies (or approves placeholders for) profile photo + any project visuals.
+1. Review [content.md](content.md), which is populated from `req/resume.md` and contains the approved public contact and career details.
+2. No resume download is included in this version.
+3. No profile photo or project screenshots are required; use typography, CSS, and structured content to make the projects visually compelling.
 
 ## Phase 1 — Project Scaffolding
 
@@ -12,7 +12,7 @@
 2. Set up folder structure:
    ```
    src/
-     assets/            # images, icons, resume.pdf copy
+    assets/            # optional local assets, icons
      components/        # Hero, About, Timeline, Skills, Projects, Achievements, Contact, Nav, Footer
      sections/          # page-section wrappers composing components
      hooks/              # e.g. useScrollReveal, useActiveSection
@@ -21,8 +21,7 @@
      App.tsx
      main.tsx
    public/
-     resume.pdf
-     favicon, og-image
+    favicon, og-image
    ```
 3. Configure ESLint + Prettier for consistent formatting.
 4. Add `vite.config` `base` path setup for GitHub Pages (root user site needs `base: '/'`).
@@ -43,20 +42,22 @@
 ## Phase 4 — Sections (build in this order, one at a time, verify each in browser before moving on)
 
 1. **Hero** — full-viewport intro, name/title/tagline, scroll-down indicator, entrance animation.
-2. **About Me** — text + portrait placeholder, fade/slide-in on scroll.
+2. **About Me** — text-only introduction with a strong capability statement, fade/slide-in on scroll.
 3. **Experience Timeline** — vertical timeline, each entry animates in as it enters viewport; uses display titles from the mapping table.
 4. **Skills** — grouped tag/pill grid with staggered reveal animation.
-5. **Projects** — 3 large feature blocks (one per project in content.md), alternating image/text layout, scroll-triggered reveal, "Apple product feature" feel.
-6. **Achievements** — Year-End Event highlight block.
-7. **Resume CTA** — prominent button/section to download resume PDF.
-8. **Contact/Footer** — icons + links, copyright line.
+5. **Selected Work / Innovation** — Build visually distinct, text-led feature stories for the AI Test Case Agent, XML/JSON Test Data Platforms, Mock Server, Custom BDD Agent, AI Mesh concept, and the two framework migrations. Use architecture diagrams made with HTML/CSS where useful; do not depend on screenshots.
+6. **Application Leadership** — Present the AWS Digital Customer QA leadership, release cadence, automation coverage, reporting, audits, and stakeholder practices as an outcome-led case study.
+7. **Observability & Enterprise Delivery** — Present DataDog/BrowserStack production testing and the SAP-to-Salesforce and Cognito-to-Entra migrations as concise capability stories.
+8. **Education & Certifications** — Display confirmed education and certifications in a compact, scannable layout.
+9. **Achievements** — Year-End Event leadership, deck/video communication, awards, and technical achievements.
+10. **Contact/Footer** — icons + links, copyright line.
 
 ## Phase 5 — Animation & Polish
 
 1. Implement a small hand-written `useScrollReveal` hook using the native `IntersectionObserver` API to toggle a CSS class (e.g. `is-visible`) when a section enters the viewport; pair with CSS transitions/keyframes for fade/slide/scale reveals. No animation library dependency.
 2. Respect `prefers-reduced-motion` — disable/simplify animations when set (CSS media query + hook check).
 3. Add page transitions/micro-interactions on buttons and nav links (hover/focus states) using CSS only.
-4. Optimize images (lazy loading via native `loading="lazy"`, responsive `srcset`, WebP where possible).
+4. Keep the experience image-independent; optimize typography, layout density, CSS diagrams, and native transitions instead of adding image dependencies.
 
 ## Phase 6 — SEO, Meta, Accessibility
 
@@ -68,7 +69,7 @@
 
 1. Manual cross-browser check (Chrome, Edge, Safari, Firefox) and cross-device (mobile/tablet/desktop).
 2. Lighthouse audit — target Performance/Accessibility/Best Practices/SEO all ≥ 90.
-3. Verify all links (resume download, LinkedIn, GitHub, email `mailto:`) work correctly.
+3. Verify all links (LinkedIn, GitHub, email `mailto:`) work correctly.
 
 ## Phase 8 — Deployment (GitHub Pages)
 

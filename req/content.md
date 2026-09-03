@@ -1,90 +1,133 @@
 # Site Content (Source of Truth for Copy)
 
-> This file holds the actual words/data the website should render. Anything marked
-> `TODO(resume)` must be filled in by the user (from `req/Kathireshan Manoharan.pdf`)
-> before or during the build — Copilot must NOT invent these values.
+> This file holds the actual words/data the website should render. Resume facts are
+> transcribed from `req/resume.md`. Copilot must not invent additional facts.
 
 ## Identity
 
 - **Name:** Kathireshan M
 - **Display Title / Tagline:** Senior Quality Engineer | SDET
-- **Short one-liner (hero subtext):** TODO(user) — e.g. "Building intelligent quality engineering tools that ship faster, safer software."
-- **Location:** TODO(resume)
+- **Short one-liner (hero subtext):** I turn complex quality problems into intelligent tools, resilient automation, and measurable delivery improvements.
 
 ## About Me
 
 Draft (edit freely):
 
-> I'm Kathireshan M, a Senior Quality Engineer | SDET who builds AI-assisted testing tools and automation platforms that help teams ship reliable software faster. My work spans GenAI-powered test case generation, schema-driven test data automation on Azure/AWS, and advanced API mocking frameworks — alongside a genuine love for bringing teams together outside of work.
+> I'm Kathireshan M, a Senior Quality Engineer | SDET who turns complex quality challenges into intelligent tools, resilient automation, and measurable delivery improvements. My work spans AI-assisted test case generation, schema-driven XML and JSON test data platforms, advanced API mocking, framework migrations, cloud-connected pipelines, observability, and quality leadership.
 
-TODO(user): confirm/edit tone and add anything personal (hobbies, interests) to humanize the section.
+The site should keep the tone professional and concise. Do not add hobbies or personal details that are not present in the source content.
 
 ## Experience Timeline
 
-> Fill in company names and exact dates from the resume. Titles must use the **display title**, not the internal title (see mapping table in `req/requirement.md` §6).
+> Titles must use the **display title**, not the internal title (see mapping table in `req/requirement.md` §6). The internal titles are retained here only to document the mapping and must not appear in the UI.
 
-| # | Display Title | Internal Title (for reference only, not shown) | Company | Start – End | Location | Key Highlights |
-|---|---------------|--------------------------------------------------|---------|-------------|----------|-----------------|
-| 1 | Senior Quality Engineer \| SDET | Associate | TODO(resume) | TODO(resume) | TODO(resume) | Built Test Case AI Agent using GitHub Copilot SDK |
-| 2 | Quality Engineer | Programmer Analyst / Programmer | TODO(resume) | TODO(resume) | TODO(resume) | Built Dynamic Run-Time Schema Test Data Tool (Azure + AWS); Built Mock Server Tool |
-| 3 | Junior Quality Engineer | Programmer Trainee | TODO(resume) | TODO(resume) | TODO(resume) | TODO(resume) |
-
-Add/remove rows as needed to match the actual resume history.
+| # | Display Title | Internal Title (for reference only, not shown) | Company | Start – End | Key Highlights |
+|---|---------------|--------------------------------------------------|---------|-------------|-----------------|
+| 1 | Senior Quality Engineer \| SDET | Associate | Cognizant Technology Solutions Pvt. Ltd. | October 2025 – Present | Built AI-assisted quality tools, a production-grade API Mock Server, GitHub Copilot extensibility workflows, MCP integrations, and dynamic schema-based XML tooling; led authentication migration and reduced script rework cycles by 70%. |
+| 2 | Quality Engineer | Programmer Analyst | Cognizant Technology Solutions Pvt. Ltd. | November 2020 – October 2025 | Led automation migrations, SAP-to-Salesforce delivery, an eight-member application QA team, XML/JSON test data tooling, and cloud pipelines; achieved 95% cross-browser/device coverage, 60% faster Cypress execution, and mentored 10+ testers. |
 
 ## Skills
 
 Group into categories — refine list from resume + projects:
 
-- **AI / GenAI Tooling:** GitHub Copilot SDK, Prompt Engineering, AI Test Case Generation
-- **Test Automation & QE:** Test Strategy, API Testing, Test Data Management, Mocking/Virtualization
-- **Cloud & DevOps:** Azure Pipelines, AWS (service used — TODO(resume) confirm which AWS service, e.g. S3/Lambda/DynamoDB)
-- **Languages:** TODO(resume) (e.g. JavaScript, Python, Java, C#)
-- **Other Tools:** TODO(resume) (e.g. Postman, Jenkins, Git, Docker)
+- **Automation Tools:** Selenium, Cypress, Playwright, REST Assured, Postman, BrowserStack, Cucumber, TestNG
+- **AI Engineering & LLMs:** GitHub Copilot Extensibility, Model Context Protocol (MCP), Multi-Agent Mesh Systems, State Retention Loops, Prompt Engineering, Claude, Autonomous Subagents
+- **Programming Languages & Frameworks:** Java, JavaScript, Node.js, Cypress, Serenity, WebdriverIO (WDIO)
+- **CI/CD & Build Tools:** Maven, Azure DevOps Pipelines, GitHub Actions, Git
+- **Defect & Test Management:** Azure DevOps, Trello, GitHub Project Board, ServiceNow, DataDog, JIRA
+- **Testing Specialties:** UI Automation, API Automation, Functional Testing, Regression Testing, Integration Testing, Cross-Browser Testing, Cross-Device Testing
+- **Cloud, Architectures & Methodologies:** Amazon Web Services (AWS), Microsoft Azure, Salesforce, MuleSoft, Vlocity, Microservices, React, Angular, WayPoint, Agile, Scrum, Sprint Delivery
+- **Leadership & Delivery:** QA Team Leadership, Agile Ceremonies, In-Sprint Automation, QA Audits, DSR/MSR Reporting, Bug Triage, Quality Metrics, Stakeholder Communication
+- **Observability:** DataDog Synthetic Monitoring, Production Alerts, Metrics and Threshold Monitoring, BrowserStack Real-Device Testing
 
 ## Projects
 
 ### 1. Test Case AI Agent
 
-- **Built during:** Senior Quality Engineer | SDET role (current year)
-- **Summary:** An AI agent built using the GitHub Copilot SDK that assists in generating and maintaining test cases, reducing manual authoring effort and improving coverage consistency.
-- **Tech:** GitHub Copilot SDK, TODO(user: language/framework used, e.g. Node.js/TypeScript)
-- **Impact / Result:** TODO(user) — e.g. time saved, adoption, coverage improvement (quantify if possible)
+- **Built during:** Senior Quality Engineer | SDET role
+- **Summary:** A guarded AI test case creation agent built with the GitHub Copilot SDK. It connects through custom MCP tooling to Azure DevOps and GitHub Project Board, retrieves user story descriptions and acceptance criteria, searches related stories by keywords, and prepares relevant context for the LLM while conserving token usage.
+- **Tech:** GitHub Copilot SDK, GitHub Copilot Extensibility, MCP, Node.js, Express.js
+- **Impact / Result:** Drastically reduced manual test case authoring effort. Guardrails, human-in-the-loop approvals, staged review, and a security-analysis factor help keep the workflow transparent, responsible, and secure.
 
-### 2. Dynamic Run-Time Schema Based Test Data Creation Tool
+### 2. XML and JSON Test Data Platforms
 
-- **Built during:** Quality Engineer role (Programmer Analyst / earlier)
-- **Summary:** A tool that dynamically generates test data based on schemas resolved at run time, executed as part of an Azure Pipeline and integrated with an AWS service.
-- **Tech:** Azure Pipelines, AWS (TODO(resume): which service), TODO(user: language, e.g. Python/Java/.NET)
-- **Impact / Result:** TODO(user) — e.g. reduced test data prep time, enabled parallel test execution, etc.
+- **Built during:** Quality Engineer and Senior Quality Engineer | SDET roles
+- **Summary:** Created XML and JSON test data tools so the team could generate valid test files instead of preparing data manually. The XML tool began in Serenity Cucumber Java, moved to Express.js, and was later upgraded to fetch the latest XML schema from the Azure DevOps developer repository and generate data from current schema rules.
+- **Tech:** Serenity Cucumber Java, Express.js, JavaScript, Azure DevOps, XML/XSD, JSON, Azure Pipelines
+- **Impact / Result:** Reduced XML test data creation time from 30 minutes to 5 minutes and reduced maintenance when developers changed or introduced schemas.
 
 ### 3. Mock Server Tool
 
-- **Built during:** Quality Engineer role (Programmer Analyst / earlier)
-- **Summary:** A custom mock server enabling advanced response mocking — configurable status codes, response body, cookies, and full response objects via custom JSON, with JavaScript scripting to derive dynamic mock responses, and custom API paths supporting pattern matching.
-- **Tech:** TODO(user: language/framework, e.g. Node.js/Express)
-- **Impact / Result:** TODO(user) — e.g. enabled contract testing without dependent services being live, sped up integration testing.
+- **Built during:** Senior Quality Engineer | SDET role
+- **Summary:** A standalone Fiddler-like mock server that monitors configured API calls from Chrome, Edge, Postman, and other applications, then returns static or programmatic responses. Multiple APIs can be mocked simultaneously, including response headers, body, cookies, and the complete response object.
+- **Tech:** Node.js, Express.js, custom JSON, JavaScript
+- **Impact / Result:** Enables dynamic edge-case testing before dependent services or uncommon response conditions are available, with static URL matching or pattern matching.
+
+### 4. Custom BDD Automation Agent
+
+- **Built during:** Senior Quality Engineer | SDET role
+- **Summary:** Created a custom agent using markdown-based skills, agent instructions, and hooks to work on BDD test automation.
+- **Capabilities:** Creates new automation code, modifies existing code, and diagnoses/debugs automation failures.
+- **Impact / Result:** Improved the quality of AI-generated BDD automation and reduced the manual modifications required from QA engineers.
+
+### 5. AI Mesh Architecture Concept
+
+- **Built during:** Senior Quality Engineer | SDET role
+- **Summary:** Designed an AI usage concept in which agents keep structured notes about what worked, what failed, how to process future requests, and how to present results, creating a feedback loop for self-evaluation and refinement.
+- **Framing:** This is an architecture concept/prototype and must not be presented as a production deployment.
+
+### 6. Automation Framework Migrations
+
+- **Serenity to Cypress:** Planned and led the migration of 1,400 digital portal Serenity Java + Cucumber BDD scripts to a Cypress JavaScript + Cucumber BDD framework. Created the Cypress framework from scratch after a proof of concept and led a four-member migration team.
+- **Serenity to WebdriverIO:** Planned and led the Salesforce Serenity Java + Cucumber BDD migration to a WebdriverIO JavaScript + Cucumber BDD framework. Created the framework from scratch after a proof of concept and led a 15-member migration team.
+- **Outcome:** Modernized automation foundations while improving execution speed, maintainability, and team delivery capability.
+
+### 7. Application Quality Leadership
+
+- **Scope:** Led an eight-member AWS Digital Customer web portal QA team, balancing customer experience, business requirements, Agile ceremonies, in-sprint automation, delivery readiness, and QA process audits.
+- **Delivery:** Supported twice-weekly releases while maintaining approximately 80% automation coverage and pass percentage by addressing flakiness, test data issues, and change-driven maintenance.
+- **Pipelines:** Created nightly smoke and deployment-triggered regression pipelines. Reports were hosted on GitHub Pages and shared with stakeholders by email with test percentage and status.
+- **Quality operations:** Collected DSRs, prepared MSRs and automation metrics, led bug triage communication, checked agreed SDLC quality measures, and supported squads toward shared quality goals.
+
+### 8. Production Observability and Real-Device Testing
+
+- **Summary:** Created DataDog synthetic tests for production checks, monitored alerts, metrics, errors, and threshold spikes, and built a real-time multi-device test using DataDog and BrowserStack.
+- **Implementation:** The test identifies the top 10 production device/browser combinations in real time, matches them to available BrowserStack devices, and executes coverage against representative production usage.
+- **Impact / Result:** Strengthened early detection, production confidence, and customer-focused cross-device coverage.
+
+### 9. Enterprise Migration Leadership
+
+- **SAP to Salesforce:** Led migration of user, billing, payment, meter, and industry details from SAP into Salesforce and a custom energy CRM connected to the UK energy industry.
+- **Cognito to Microsoft Entra:** Led migration of end-customer authentication from Spring Boot and AWS Cognito to Microsoft Entra for a digital web application and mobile app.
 
 ## Achievements / Culture
 
 - **Year-End Event Organizer:** Planned and conducted year-end events for the team, creating fun moments and strengthening team spirit and camaraderie.
-- TODO(user): any other achievements, certifications, awards, or recognitions to include.
+- **Awards:** Best Team Player of the Year (2024); Best Performer of the Month (2024); Leadership Excellence Award (2025); KM Portal Implementation Recognition (2023).
+- **Technical Achievements:** Built an autonomous context-crawling AI agent; developed a custom Prompt Library VS Code extension; architected an Anthropic MCP server using Microsoft Graph APIs.
+- **Year-End Communications:** Planned and conducted year-end events for the entire onshore and offshore team from joining Cognizant through 2024. Created polished year-end deck videos and presentations covering Delivery Lead changes, turnovers, achievements, innovation ideas, successes, and KPIs for Delivery Leads meetings.
 
-## Resume
+## Education
 
-- Source file: `req/Kathireshan Manoharan.pdf` (to be copied into `public/resume.pdf` during build).
-- "Download Resume" button should link directly to the PDF.
+- **Master of Science – Information Technology:** Bharathiar University, Coimbatore (2021 – 2025)
+- **Bachelor of Science – Information Technology:** Kongunadu Arts and Science College, Coimbatore (2017 – 2020)
+
+## Certifications
+
+- Anthropic - Claude Certified Architect (Foundations), including Advanced Track, Cloud Implementations, and Workflow Toolkits
+- DataDog Foundation
+- Introduction to Observability
 
 ## Contact
 
-> All values below must be transcribed exactly from the resume PDF or supplied by the user — do not guess.
+> Phone is intentionally excluded. These public contact values are transcribed from `req/resume.md`.
 
-- **Email:** TODO(resume)
-- **LinkedIn:** TODO(resume)
-- **GitHub:** TODO(resume) (likely `https://github.com/KathireshanM` — confirm)
-- **Instagram:** TODO(user) (optional, if to be linked from the site itself)
+- **Email:** kathireshanmanoharan@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/kathireshan-manoharan-18599a192
+- **GitHub:** https://github.com/kathireshan258
 
 ## SEO / Social Preview
 
 - **Page Title:** Kathireshan M | Senior Quality Engineer & SDET
-- **Meta Description:** TODO(user) — one sentence, e.g. "Portfolio of Kathireshan M — Senior Quality Engineer | SDET specializing in AI-driven test automation, test data engineering, and API mocking."
-- **Open Graph Image:** placeholder until a real banner/photo is supplied.
+- **Meta Description:** Portfolio of Kathireshan M — Senior Quality Engineer | SDET specializing in AI-driven test automation, test data engineering, API mocking, and cloud-connected quality engineering.
+- **Open Graph Image:** No custom image; use a text-based/social preview fallback if supported by the implementation.
