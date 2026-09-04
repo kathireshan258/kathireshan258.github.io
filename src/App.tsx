@@ -268,7 +268,7 @@ function AboutSection() {
           id="about-heading"
           eyebrow={about.eyebrow}
           title={about.title}
-          description="A concise profile built from the verified resume and portfolio content."
+          description="Where quality engineering meets AI — turning testing challenges into smarter, faster solutions."
         />
 
         <div className="about-copy">
